@@ -18,13 +18,14 @@ private:
     std::vector<std::string> solutions;
     int goal_i = lengthOfMap - 1;
     int goal_j = lengthOfMap - 1;
+
+
+public:
     struct Coordination {
         int i;
         int j;
     };
     std::vector<std::vector<Coordination>> generation;
-
-public:
     SolutionSpace();
 
     static void printMap();
@@ -40,6 +41,10 @@ public:
     static void printAdjacentVector(const std::vector<SolutionSpace::Coordination> &coordinations);
 
     static bool checkEligibilty(Coordination c1, Coordination c2);
+
+    std::vector<std::vector<Coordination>> getFirstGeneration();
+
+
 };
 
 #endif //UAVPATHPLANNINGGA_SOLUTIONSPACE_H

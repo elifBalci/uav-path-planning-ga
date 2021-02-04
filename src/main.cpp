@@ -1,8 +1,8 @@
 #include <iostream>
 #include "SolutionSpace.h"
+#include "GeneticAlgorithm.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    SolutionSpace sp;
+    GeneticAlgorithm ga;
     return 0;
 }
