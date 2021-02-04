@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/src/GeneticAlgorithm.cpp">
+			<Option target="UAVPathPlanningGA"/>
+		</Unit>
+		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/src/GeneticAlgorithm.h">
+			<Option target="UAVPathPlanningGA"/>
+		</Unit>
 		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.cpp">
 			<Option target="UAVPathPlanningGA"/>
 		</Unit>

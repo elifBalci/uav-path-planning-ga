@@ -143,6 +143,33 @@ UAVPathPlanningGA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/build
 .PHONY : UAVPathPlanningGA/fast
 
+src/GeneticAlgorithm.o: src/GeneticAlgorithm.cpp.o
+
+.PHONY : src/GeneticAlgorithm.o
+
+# target to build an object file
+src/GeneticAlgorithm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/GeneticAlgorithm.cpp.o
+.PHONY : src/GeneticAlgorithm.cpp.o
+
+src/GeneticAlgorithm.i: src/GeneticAlgorithm.cpp.i
+
+.PHONY : src/GeneticAlgorithm.i
+
+# target to preprocess a source file
+src/GeneticAlgorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/GeneticAlgorithm.cpp.i
+.PHONY : src/GeneticAlgorithm.cpp.i
+
+src/GeneticAlgorithm.s: src/GeneticAlgorithm.cpp.s
+
+.PHONY : src/GeneticAlgorithm.s
+
+# target to generate assembly for a file
+src/GeneticAlgorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/GeneticAlgorithm.cpp.s
+.PHONY : src/GeneticAlgorithm.cpp.s
+
 src/SolutionSpace.o: src/SolutionSpace.cpp.o
 
 .PHONY : src/SolutionSpace.o
@@ -206,6 +233,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... UAVPathPlanningGA"
+	@echo "... src/GeneticAlgorithm.o"
+	@echo "... src/GeneticAlgorithm.i"
+	@echo "... src/GeneticAlgorithm.s"
 	@echo "... src/SolutionSpace.o"
 	@echo "... src/SolutionSpace.i"
 	@echo "... src/SolutionSpace.s"
