@@ -24,11 +24,11 @@ void SolutionSpace::printMap() {
 }
 
 void SolutionSpace::createRandomSolutions() {
-    coordination initialCoordination{0, 0};
-    coordination c{};
+    Coordination initialCoordination{0, 0};
+    Coordination c{};
     int isGoalFound = 0;
     for (int i = 0; i < 10; i++) {
-        std::vector<coordination> route;
+        std::vector<Coordination> route;
         route.push_back(initialCoordination);
         while (!isGoalFound) {
             c = findRandomAdjacent(initialCoordination);
@@ -48,14 +48,14 @@ void SolutionSpace::createRandomSolutions() {
 }
 
 
-bool SolutionSpace::checkGoal(SolutionSpace::coordination current) const {
+bool SolutionSpace::checkGoal(SolutionSpace::Coordination current) const {
     if (current.i == goal_i && current.j == goal_j)
         return true;
     return false;
 }
 
-SolutionSpace::coordination SolutionSpace::findRandomAdjacent(SolutionSpace::coordination currentCoordination) {
-    std::vector<SolutionSpace::coordination> adjacentCoordination;
+SolutionSpace::Coordination SolutionSpace::findRandomAdjacent(SolutionSpace::Coordination currentCoordination) {
+    std::vector<SolutionSpace::Coordination> adjacentCoordination;
     int i = currentCoordination.i;
     int j = currentCoordination.j;
 
@@ -64,7 +64,7 @@ SolutionSpace::coordination SolutionSpace::findRandomAdjacent(SolutionSpace::coo
             if (i + x >= 0 && j + y >= 0 && !(i + x == i && j + y == j)) {
                 if (*map[i + x, j + y] == 0) {
                     if ((i + x < lengthOfMap && j + y < lengthOfMap)) {
-                        coordination c1{i + x, j + y};
+                        Coordination c1{i + x, j + y};
                         adjacentCoordination.push_back(c1);
                     }
                 }
@@ -77,7 +77,7 @@ SolutionSpace::coordination SolutionSpace::findRandomAdjacent(SolutionSpace::coo
     std::mt19937 generator(rand_dev());
     std::uniform_int_distribution<int> distr(range_from, range_to);
 
-    coordination c = adjacentCoordination[distr(generator)];
+    Coordination c = adjacentCoordination[distr(generator)];
     return c;
 }
 
@@ -93,7 +93,7 @@ void SolutionSpace::printGeneration() {
     }
 }
 
-void SolutionSpace::printAdjacentVector(const std::vector<SolutionSpace::coordination> &coordinations) {
+void SolutionSpace::printAdjacentVector(const std::vector<SolutionSpace::Coordination> &coordinations) {
     for (auto &coordination : coordinations) {
         std::cout << "\n..printing..";
         std::cout << coordination.i;
@@ -103,7 +103,7 @@ void SolutionSpace::printAdjacentVector(const std::vector<SolutionSpace::coordin
     }
 }
 
-bool SolutionSpace::checkEligibilty(SolutionSpace::coordination c1, SolutionSpace::coordination c2) {
+bool SolutionSpace::checkEligibilty(SolutionSpace::Coordination c1, SolutionSpace::Coordination c2) {
     int diff1 = c1.i - c2.i;
     int diff2 = c2.j - c2.j;
 

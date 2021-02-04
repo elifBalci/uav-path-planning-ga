@@ -18,11 +18,11 @@ private:
     std::vector<std::string> solutions;
     int goal_i = lengthOfMap - 1;
     int goal_j = lengthOfMap - 1;
-    struct coordination {
+    struct Coordination {
         int i;
         int j;
     };
-    std::vector<std::vector<coordination>> generation;
+    std::vector<std::vector<Coordination>> generation;
 
 public:
     SolutionSpace();
@@ -31,15 +31,15 @@ public:
 
     void createRandomSolutions();
 
-    bool checkGoal(SolutionSpace::coordination current) const;
+    bool checkGoal(SolutionSpace::Coordination current) const;
 
-    static coordination findRandomAdjacent(coordination currentCoordination);
+    static Coordination findRandomAdjacent(Coordination currentCoordination);
 
     void printGeneration();
 
-    static void printAdjacentVector(const std::vector<SolutionSpace::coordination> &coordinations);
+    static void printAdjacentVector(const std::vector<SolutionSpace::Coordination> &coordinations);
 
-    static bool checkEligibilty(coordination c1, coordination c2);
+    static bool checkEligibilty(Coordination c1, Coordination c2);
 };
 
 #endif //UAVPATHPLANNINGGA_SOLUTIONSPACE_H
