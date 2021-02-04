@@ -10,6 +10,7 @@
 GeneticAlgorithm::GeneticAlgorithm() {
     GeneticAlgorithm::generation = solutionSpace.generation;
     chooseForMatingPool();
+    onePointCrossover(matingPool[0], matingPool[1]);
 }
 
 float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordination> individual) {
@@ -28,7 +29,7 @@ float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordinati
 
 void GeneticAlgorithm::chooseForMatingPool() {
     fitnessValueManager();
-    float random = 0;
+    float random;
     for (int i = 0; i < generation.size(); i++) {
         random = generateRandom();
         std::vector<SolutionSpace::Coordination> selected;
@@ -57,9 +58,9 @@ float GeneticAlgorithm::generateRandom() {
 void GeneticAlgorithm::fitnessValueManager() {
     fitnessValueList.clear();
     float totalFitnessValue = 0;
-    float fitnessValue = 0;
+    float fitnessValue;
     for (auto &i : generation) {
-        fitnessValue = 1/evaluateIndividual(i);
+        fitnessValue = 1 / evaluateIndividual(i);
         totalFitnessValue += fitnessValue;
         fitnessValueList.push_back(fitnessValue);
     }
@@ -73,7 +74,7 @@ void GeneticAlgorithm::fitnessValueManager() {
 
 void GeneticAlgorithm::createFitnessProbabilityIntervals() {
     float previous = 0;
-    float current = 0;
+    float current;
     for (float i : fitnessValueProbability) {
         current = i;
         fitnessProbabilityIntervals.push_back(current + previous);
@@ -90,6 +91,43 @@ void GeneticAlgorithm::printMatingPool() {
         }
         std::cout << "\n";
     }
+}
+
+std::vector<std::vector<SolutionSpace::Coordination>>
+GeneticAlgorithm::onePointCrossover(std::vector<SolutionSpace::Coordination> c1,
+                                    std::vector<SolutionSpace::Coordination> c2) {
+    float minSize = std::min(c1.size(), c2.size());
+    int random = int(generateRandom() * minSize);
+
+    std::vector<SolutionSpace::Coordination> temp1;
+    std::vector<SolutionSpace::Coordination> temp2;
+    std::vector<SolutionSpace::Coordination> temp3;
+    std::vector<SolutionSpace::Coordination> temp4;
+
+    for (int i = 0; i < c1.size(); ++i) {
+        if (i <= random) {
+            temp1.push_back(c1[i]);
+        } else {
+            temp3.push_back(c1[i]);
+        }
+    }
+    for (int i = 0; i < c2.size(); ++i) {
+        if (i <= random) {
+            temp2.push_back(c2[i]);
+        } else {
+            temp4.push_back(c2[i]);
+        }
+    }
+    c1.clear();
+    c1 = temp1;
+    c1.insert(c1.end(), temp4.begin(), temp4.end());
+    c2.clear();
+    c2 = temp2;
+    c2.insert(c2.end(), temp3.begin(), temp3.end());
+    std::vector<std::vector<SolutionSpace::Coordination>> returnList;
+    returnList.push_back(c1);
+    returnList.push_back(c2);
+    return returnList;
 }
 
 

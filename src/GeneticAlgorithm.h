@@ -37,6 +37,8 @@ public:
 
     void printMatingPool();
 
+    static std::vector<std::vector<SolutionSpace::Coordination>> onePointCrossover(std::vector<SolutionSpace::Coordination> c1, std::vector<SolutionSpace::Coordination> c2);
+
 
 };
 
