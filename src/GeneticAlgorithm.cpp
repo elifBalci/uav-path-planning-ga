@@ -11,6 +11,7 @@ GeneticAlgorithm::GeneticAlgorithm() {
     GeneticAlgorithm::generation = solutionSpace.generation;
     chooseForMatingPool();
     onePointCrossover(matingPool[0], matingPool[1]);
+    SolutionSpace::printGeneration(generation);
 }
 
 float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordination> individual) {
@@ -45,6 +46,13 @@ void GeneticAlgorithm::chooseForMatingPool() {
 }
 
 void GeneticAlgorithm::inMatingPool() {
+    std::vector<std::vector<SolutionSpace::Coordination>> temp;
+    for (int i = 0; i < generation.size()/2; ++i) {
+        temp = onePointCrossover(generation[i], generation[i+1]);
+        generation[i] = temp[0];
+        generation[i+1] = temp[1];
+        temp.clear();
+    }
 
 }
 

@@ -9,9 +9,8 @@
 
 SolutionSpace::SolutionSpace() {
     srand(time(nullptr));
-    printMap();
     createRandomSolutions();
-    printGeneration();
+    printGeneration(generation);
 }
 
 void SolutionSpace::printMap() {
@@ -81,15 +80,14 @@ SolutionSpace::Coordination SolutionSpace::findRandomAdjacent(SolutionSpace::Coo
     return c;
 }
 
-void SolutionSpace::printGeneration() {
+void SolutionSpace::printGeneration(std::vector<std::vector<Coordination>> generation) {
     std::cout << "\n Population: \n";
     for (auto &i : generation) {
         for (auto &j : i) {
             std::cout << j.i;
             std::cout << j.j;
-            std::cout << " -> ";
         }
-        std::cout << "\n  next gen:\n";
+        std::cout << "\n";
     }
 }
 

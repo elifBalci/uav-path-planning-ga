@@ -36,7 +36,7 @@ public:
 
     static Coordination findRandomAdjacent(Coordination currentCoordination);
 
-    void printGeneration();
+    static void printGeneration(std::vector<std::vector<Coordination>> generation);
 
     static void printAdjacentVector(const std::vector<SolutionSpace::Coordination> &coordinations);
 
