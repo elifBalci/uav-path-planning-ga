@@ -6,23 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.cpp
-algorithm
--
-random
--
-SolutionSpace.h
-/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.h
-
-/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.h
+/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.h
 vector
 -
 iostream
 -
 
-/home/elif/CLionProjects/UAVPathPlanningGA/main.cpp
+/home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp
 iostream
 -
 SolutionSpace.h
-/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.h
+/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.h
 

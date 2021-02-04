@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o"
-  "CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o"
+  "CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o"
+  "CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o"
   "UAVPathPlanningGA"
   "UAVPathPlanningGA.pdb"
 )

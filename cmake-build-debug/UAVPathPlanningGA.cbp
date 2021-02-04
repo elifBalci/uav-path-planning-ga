@@ -84,13 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.cpp">
+		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.cpp">
 			<Option target="UAVPathPlanningGA"/>
 		</Unit>
-		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.h">
+		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.h">
 			<Option target="UAVPathPlanningGA"/>
 		</Unit>
-		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/main.cpp">
+		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp">
 			<Option target="UAVPathPlanningGA"/>
 		</Unit>
 		<Unit filename="/home/elif/CLionProjects/UAVPathPlanningGA/CMakeLists.txt">

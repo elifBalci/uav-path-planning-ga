@@ -77,42 +77,42 @@ include CMakeFiles/UAVPathPlanningGA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/UAVPathPlanningGA.dir/flags.make
 
-CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o: CMakeFiles/UAVPathPlanningGA.dir/flags.make
-CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o -c /home/elif/CLionProjects/UAVPathPlanningGA/main.cpp
+CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o: CMakeFiles/UAVPathPlanningGA.dir/flags.make
+CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o -c /home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp
 
-CMakeFiles/UAVPathPlanningGA.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UAVPathPlanningGA.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elif/CLionProjects/UAVPathPlanningGA/main.cpp > CMakeFiles/UAVPathPlanningGA.dir/main.cpp.i
+CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp > CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.i
 
-CMakeFiles/UAVPathPlanningGA.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UAVPathPlanningGA.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elif/CLionProjects/UAVPathPlanningGA/main.cpp -o CMakeFiles/UAVPathPlanningGA.dir/main.cpp.s
+CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp -o CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.s
 
-CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o: CMakeFiles/UAVPathPlanningGA.dir/flags.make
-CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o: ../SolutionSpace.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o -c /home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.cpp
+CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o: CMakeFiles/UAVPathPlanningGA.dir/flags.make
+CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o: ../src/SolutionSpace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o -c /home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.cpp
 
-CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.cpp > CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.i
+CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.cpp > CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.i
 
-CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.cpp -o CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.s
+CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.cpp -o CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.s
 
 # Object files for target UAVPathPlanningGA
 UAVPathPlanningGA_OBJECTS = \
-"CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o" \
-"CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o"
+"CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o" \
+"CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o"
 
 # External object files for target UAVPathPlanningGA
 UAVPathPlanningGA_EXTERNAL_OBJECTS =
 
-UAVPathPlanningGA: CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o
-UAVPathPlanningGA: CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o
+UAVPathPlanningGA: CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o
+UAVPathPlanningGA: CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o
 UAVPathPlanningGA: CMakeFiles/UAVPathPlanningGA.dir/build.make
 UAVPathPlanningGA: CMakeFiles/UAVPathPlanningGA.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable UAVPathPlanningGA"

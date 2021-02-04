@@ -143,59 +143,59 @@ UAVPathPlanningGA/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/build
 .PHONY : UAVPathPlanningGA/fast
 
-SolutionSpace.o: SolutionSpace.cpp.o
+src/SolutionSpace.o: src/SolutionSpace.cpp.o
 
-.PHONY : SolutionSpace.o
-
-# target to build an object file
-SolutionSpace.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o
-.PHONY : SolutionSpace.cpp.o
-
-SolutionSpace.i: SolutionSpace.cpp.i
-
-.PHONY : SolutionSpace.i
-
-# target to preprocess a source file
-SolutionSpace.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.i
-.PHONY : SolutionSpace.cpp.i
-
-SolutionSpace.s: SolutionSpace.cpp.s
-
-.PHONY : SolutionSpace.s
-
-# target to generate assembly for a file
-SolutionSpace.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.s
-.PHONY : SolutionSpace.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : src/SolutionSpace.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/SolutionSpace.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o
+.PHONY : src/SolutionSpace.cpp.o
 
-main.i: main.cpp.i
+src/SolutionSpace.i: src/SolutionSpace.cpp.i
 
-.PHONY : main.i
+.PHONY : src/SolutionSpace.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/SolutionSpace.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.i
+.PHONY : src/SolutionSpace.cpp.i
 
-main.s: main.cpp.s
+src/SolutionSpace.s: src/SolutionSpace.cpp.s
 
-.PHONY : main.s
+.PHONY : src/SolutionSpace.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/SolutionSpace.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.s
+.PHONY : src/SolutionSpace.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -206,12 +206,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... UAVPathPlanningGA"
-	@echo "... SolutionSpace.o"
-	@echo "... SolutionSpace.i"
-	@echo "... SolutionSpace.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/SolutionSpace.o"
+	@echo "... src/SolutionSpace.i"
+	@echo "... src/SolutionSpace.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/elif/CLionProjects/UAVPathPlanningGA/SolutionSpace.cpp" "/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles/UAVPathPlanningGA.dir/SolutionSpace.cpp.o"
-  "/home/elif/CLionProjects/UAVPathPlanningGA/main.cpp" "/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles/UAVPathPlanningGA.dir/main.cpp.o"
+  "/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.cpp" "/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o"
+  "/home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp" "/home/elif/CLionProjects/UAVPathPlanningGA/cmake-build-debug/CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
