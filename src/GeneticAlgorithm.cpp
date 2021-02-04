@@ -59,7 +59,7 @@ void GeneticAlgorithm::fitnessValueManager() {
     float totalFitnessValue = 0;
     float fitnessValue = 0;
     for (auto &i : generation) {
-        fitnessValue = evaluateIndividual(i);
+        fitnessValue = 1/evaluateIndividual(i);
         totalFitnessValue += fitnessValue;
         fitnessValueList.push_back(fitnessValue);
     }
