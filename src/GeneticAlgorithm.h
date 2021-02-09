@@ -6,7 +6,6 @@
 #define UAVPATHPLANNINGGA_GENETICALGORITHM_H
 
 #include "SolutionSpace.h"
-#include "SolutionSpace.h"
 #include <vector>
 #include<algorithm>
 #include <random>
@@ -19,6 +18,7 @@ private:
     std::vector<float> fitnessValueList;
     std::vector<float> fitnessValueProbability;
     std::vector<float> fitnessProbabilityIntervals;
+    float crossoverProbability = 0.20;
 
 public:
     GeneticAlgorithm();
