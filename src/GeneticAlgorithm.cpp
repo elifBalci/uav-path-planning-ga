@@ -10,6 +10,7 @@ GeneticAlgorithm::GeneticAlgorithm() {
     GeneticAlgorithm::generation = solutionSpace.generation;
     chooseForMatingPool();
     inMatingPool();
+    mutate();
     SolutionSpace::printGeneration(generation);
 }
 
@@ -48,12 +49,13 @@ void GeneticAlgorithm::inMatingPool() {
     float random = generateRandom();
     std::vector<std::vector<SolutionSpace::Coordination>> temp;
     for (int i = 0; i < generation.size() / 2; ++i) {
-        if (random < crossoverProbability){
+        if (random < crossoverProbability) {
             temp = onePointCrossover(generation[i], generation[i + 1]);
             generation[i] = temp[0];
             generation[i + 1] = temp[1];
             temp.clear();
         }
+        random = generateRandom();
     }
 
 }
@@ -138,6 +140,30 @@ GeneticAlgorithm::onePointCrossover(std::vector<SolutionSpace::Coordination> c1,
     returnList.push_back(c1);
     returnList.push_back(c2);
     return returnList;
+}
+
+void GeneticAlgorithm::mutate() {
+    float random;
+    for (auto &i : generation) {
+        for (int j = 0; j < generation[j].size(); j++) {
+            random = generateRandom();
+            if (random < mutationProbability) {
+                if (i[j].i == 0) {
+                    i[j].i = 1;
+                } else {
+                    i[j].i = 0;
+                }
+                if (i[j].j == 1) {
+                    i[j].j = 0;
+                } else {
+                    i[j].j = 1;
+                }
+            }
+
+        }
+
+    }
+
 }
 
 

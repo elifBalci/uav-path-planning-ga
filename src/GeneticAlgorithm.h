@@ -19,6 +19,7 @@ private:
     std::vector<float> fitnessValueProbability;
     std::vector<float> fitnessProbabilityIntervals;
     float crossoverProbability = 0.20;
+    float mutationProbability = 0.02;
 
 public:
     GeneticAlgorithm();
@@ -39,7 +40,7 @@ public:
 
     static std::vector<std::vector<SolutionSpace::Coordination>> onePointCrossover(std::vector<SolutionSpace::Coordination> c1, std::vector<SolutionSpace::Coordination> c2);
 
-
+    void mutate();
 };
 
 
