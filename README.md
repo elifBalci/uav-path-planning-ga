@@ -2,7 +2,7 @@
 **UAV path planning using Genetic Algorithm**
 
 uav-path-planning-ga project employees genetic algorithm to find shortest route for a UAV in a given matrix. 
-Map is represented as a binary matrix. 1 means that are is not suitable for flight (restricted, got high buildings, etc.), 0 means that area is usable. UAV can move diagonal or orthogonally adjacent. This repository is not aimed to be used for a real life drone rather it is a PoC. 
+Map is represented as a binary matrix. 1 means that are is not suitable for flight (restricted, got high buildings, etc.), 0 means that area is usable for the drone to fly over. UAV can move diagonal or orthogonally adjacent. This repository is not aimed to be used for a real life drone rather it is a PoC. 
 
 
 **Representation & First Generation**
