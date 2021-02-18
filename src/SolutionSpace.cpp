@@ -118,5 +118,6 @@ bool SolutionSpace::checkEligibilty(SolutionSpace::Coordination c1, SolutionSpac
 }
 
 std::vector<std::vector<SolutionSpace::Coordination>> SolutionSpace::getFirstGeneration() {
+
     return generation;
 }

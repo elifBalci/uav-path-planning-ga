@@ -8,10 +8,7 @@
 
 GeneticAlgorithm::GeneticAlgorithm() {
     GeneticAlgorithm::generation = solutionSpace.generation;
-    chooseForMatingPool();
-    inMatingPool();
-    mutate();
-    SolutionSpace::printGeneration(generation);
+    startEvalution();
 }
 
 float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordination> individual) {
@@ -26,6 +23,20 @@ float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordinati
         previous = current;
     }
     return totalPoints;
+}
+
+void GeneticAlgorithm::startEvalution() {
+    // add stopping criteria
+    int notOptimizing = 0;
+    while (notOptimizing < GeneticAlgorithm::stoppingCriteria) {
+        chooseForMatingPool();
+        inMatingPool();
+        mutate();
+        SolutionSpace::printGeneration(generation);
+        isFeasible(generation);
+        notOptimizing++;
+    }
+
 }
 
 void GeneticAlgorithm::chooseForMatingPool() {
@@ -159,12 +170,28 @@ void GeneticAlgorithm::mutate() {
                     i[j].j = 1;
                 }
             }
-
         }
-
     }
-
 }
+
+bool GeneticAlgorithm::isFeasible(std::vector<std::vector<SolutionSpace::Coordination>> solution) {
+    bool isFeasible = true;
+    int diff1;
+    int diff2;
+    for (auto &i : solution) {
+        SolutionSpace::Coordination c1 = i[0];
+        SolutionSpace::Coordination c2 = i[1];
+        diff1 = c1.i - c2.i;
+        diff2 = c2.j - c2.j;
+        if (!(diff1 <= 1 and diff1 >= -1 and diff2 <= 1 and diff2 >= -1)) {
+            printf("infeasible");
+            return false;
+        }
+    }
+    return true;
+}
+
+
 
 
 

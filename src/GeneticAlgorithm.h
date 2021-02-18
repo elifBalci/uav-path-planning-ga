@@ -18,11 +18,15 @@ private:
     std::vector<float> fitnessValueList;
     std::vector<float> fitnessValueProbability;
     std::vector<float> fitnessProbabilityIntervals;
+    float bestSoluiton = std::numeric_limits<float>::max();
+    int stoppingCriteria = 5;
     float crossoverProbability = 0.20;
     float mutationProbability = 0.02;
 
 public:
     GeneticAlgorithm();
+
+    void startEvalution();
 
     static float evaluateIndividual(std::vector<SolutionSpace::Coordination> individual);
 
@@ -41,6 +45,8 @@ public:
     static std::vector<std::vector<SolutionSpace::Coordination>> onePointCrossover(std::vector<SolutionSpace::Coordination> c1, std::vector<SolutionSpace::Coordination> c2);
 
     void mutate();
+
+    bool isFeasible(std::vector<std::vector<SolutionSpace::Coordination>>);
 };
 
 
