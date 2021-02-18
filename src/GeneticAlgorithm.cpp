@@ -175,7 +175,6 @@ void GeneticAlgorithm::mutate() {
 }
 
 bool GeneticAlgorithm::isFeasible(std::vector<std::vector<SolutionSpace::Coordination>> solution) {
-    bool isFeasible = true;
     int diff1;
     int diff2;
     for (auto &i : solution) {
