@@ -5,6 +5,7 @@
 #include "GeneticAlgorithm.h"
 #include <cmath>
 #include <random>
+#include <limits>
 
 GeneticAlgorithm::GeneticAlgorithm() {
     GeneticAlgorithm::generation = solutionSpace.generation;
@@ -25,16 +26,39 @@ float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordinati
     return totalPoints;
 }
 
+float GeneticAlgorithm::findDistance(std::vector<SolutionSpace::Coordination> individual) {
+    SolutionSpace::Coordination previous = individual[0];
+    SolutionSpace::Coordination current{};
+    float totalDistance = 0;
+    float distance;
+    for (int i = 1; i < individual.size(); i++) {
+        current = individual[i];
+        distance = std::sqrt(std::pow(current.j - previous.j, 2) + std::pow(current.i - previous.i, 2));
+        totalDistance = totalDistance + distance;
+        previous = current;
+    }
+    return totalDistance;
+}
+
 void GeneticAlgorithm::startEvalution() {
     // add stopping criteria
     int notOptimizing = 0;
+    float best = std::numeric_limits<float>::max();
+    float temp;
     while (notOptimizing < GeneticAlgorithm::stoppingCriteria) {
+        printf("\n\nNot optimizing: \t %d times", notOptimizing);
+        printf("\n\nBest : \t %f\n\n", best);
         chooseForMatingPool();
         inMatingPool();
         mutate();
         SolutionSpace::printGeneration(generation);
         isFeasible(generation);
-        notOptimizing++;
+        temp = findBestValue(generation);
+        if (temp < best) {
+            best = temp;
+        } else {
+            notOptimizing++;
+        }
     }
 
 }
@@ -53,7 +77,7 @@ void GeneticAlgorithm::chooseForMatingPool() {
         }
         matingPool.push_back(selected);
     }
-    printMatingPool();
+    // printMatingPool();
 }
 
 void GeneticAlgorithm::inMatingPool() {
@@ -188,6 +212,18 @@ bool GeneticAlgorithm::isFeasible(std::vector<std::vector<SolutionSpace::Coordin
         }
     }
     return true;
+}
+
+float GeneticAlgorithm::findBestValue(std::vector<std::vector<SolutionSpace::Coordination>> sol) {
+    float best = std::numeric_limits<float>::max();;
+    float temp;
+    for (auto &i : sol) {
+        temp = GeneticAlgorithm::findDistance(i);
+        if (temp < best) {
+            best = temp;
+        }
+    }
+    return best;
 }
 
 
