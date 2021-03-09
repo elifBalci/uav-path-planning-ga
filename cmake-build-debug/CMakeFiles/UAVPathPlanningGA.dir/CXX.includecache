@@ -6,37 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/elif/CLionProjects/UAVPathPlanningGA/src/GeneticAlgorithm.cpp
-GeneticAlgorithm.h
-/home/elif/CLionProjects/UAVPathPlanningGA/src/GeneticAlgorithm.h
-cmath
+/home/elif/CLionProjects/UAVPathPlanningGA/src/InputHandler.cpp
+array
 -
-random
--
-limits
--
-
-/home/elif/CLionProjects/UAVPathPlanningGA/src/GeneticAlgorithm.h
-SolutionSpace.h
-/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.h
 vector
 -
-algorithm
--
-random
--
-
-/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.h
-vector
+fstream
 -
 iostream
 -
+InputHandler.h
+/home/elif/CLionProjects/UAVPathPlanningGA/src/InputHandler.h
 
-/home/elif/CLionProjects/UAVPathPlanningGA/src/main.cpp
-iostream
+/home/elif/CLionProjects/UAVPathPlanningGA/src/InputHandler.h
+string
 -
-SolutionSpace.h
-/home/elif/CLionProjects/UAVPathPlanningGA/src/SolutionSpace.h
-GeneticAlgorithm.h
-/home/elif/CLionProjects/UAVPathPlanningGA/src/GeneticAlgorithm.h
 

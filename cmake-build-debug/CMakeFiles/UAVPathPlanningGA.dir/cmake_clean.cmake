@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UAVPathPlanningGA.dir/src/GeneticAlgorithm.cpp.o"
+  "CMakeFiles/UAVPathPlanningGA.dir/src/InputHandler.cpp.o"
   "CMakeFiles/UAVPathPlanningGA.dir/src/SolutionSpace.cpp.o"
   "CMakeFiles/UAVPathPlanningGA.dir/src/main.cpp.o"
   "UAVPathPlanningGA"

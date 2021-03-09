@@ -7,10 +7,12 @@
 
 #include <vector>
 #include <iostream>
+#include "InputHandler.h"
 
 
 class SolutionSpace {
 private:
+    InputHandler inputHandler;
     int const static lengthOfMap = 3;
     constexpr const static int map[lengthOfMap][lengthOfMap] = {{0, 1, 0},
                                                                 {0, 0, 1},

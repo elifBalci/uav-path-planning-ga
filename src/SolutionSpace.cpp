@@ -8,6 +8,7 @@
 
 
 SolutionSpace::SolutionSpace() {
+    inputHandler.readToArray();
     srand(time(nullptr));
     createRandomSolutions();
     printGeneration(generation);

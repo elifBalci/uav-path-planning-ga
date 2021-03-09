@@ -170,6 +170,33 @@ src/GeneticAlgorithm.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/GeneticAlgorithm.cpp.s
 .PHONY : src/GeneticAlgorithm.cpp.s
 
+src/InputHandler.o: src/InputHandler.cpp.o
+
+.PHONY : src/InputHandler.o
+
+# target to build an object file
+src/InputHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/InputHandler.cpp.o
+.PHONY : src/InputHandler.cpp.o
+
+src/InputHandler.i: src/InputHandler.cpp.i
+
+.PHONY : src/InputHandler.i
+
+# target to preprocess a source file
+src/InputHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/InputHandler.cpp.i
+.PHONY : src/InputHandler.cpp.i
+
+src/InputHandler.s: src/InputHandler.cpp.s
+
+.PHONY : src/InputHandler.s
+
+# target to generate assembly for a file
+src/InputHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UAVPathPlanningGA.dir/build.make CMakeFiles/UAVPathPlanningGA.dir/src/InputHandler.cpp.s
+.PHONY : src/InputHandler.cpp.s
+
 src/SolutionSpace.o: src/SolutionSpace.cpp.o
 
 .PHONY : src/SolutionSpace.o
@@ -236,6 +263,9 @@ help:
 	@echo "... src/GeneticAlgorithm.o"
 	@echo "... src/GeneticAlgorithm.i"
 	@echo "... src/GeneticAlgorithm.s"
+	@echo "... src/InputHandler.o"
+	@echo "... src/InputHandler.i"
+	@echo "... src/InputHandler.s"
 	@echo "... src/SolutionSpace.o"
 	@echo "... src/SolutionSpace.i"
 	@echo "... src/SolutionSpace.s"
