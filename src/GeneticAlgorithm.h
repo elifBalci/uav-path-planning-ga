@@ -26,7 +26,7 @@ private:
 public:
     GeneticAlgorithm();
 
-    void startEvalution();
+    void startEvolution();
 
     static float evaluateIndividual(std::vector<SolutionSpace::Coordination> individual);
 
@@ -46,11 +46,11 @@ public:
 
     void mutate();
 
-    bool isFeasible(std::vector<std::vector<SolutionSpace::Coordination>>);
+    static bool isFeasible(std::vector<std::vector<SolutionSpace::Coordination>>);
 
-    float findBestValue(std::vector<std::vector<SolutionSpace::Coordination>>);
+    static float findBestValue(std::vector<std::vector<SolutionSpace::Coordination>>);
 
-    float findDistance(std::vector<SolutionSpace::Coordination> individual);
+    static float findDistance(std::vector<SolutionSpace::Coordination> individual);
 };
 
 

@@ -9,7 +9,7 @@
 
 GeneticAlgorithm::GeneticAlgorithm() {
     GeneticAlgorithm::generation = solutionSpace.generation;
-    startEvalution();
+    startEvolution();
 }
 
 float GeneticAlgorithm::evaluateIndividual(std::vector<SolutionSpace::Coordination> individual) {
@@ -40,8 +40,7 @@ float GeneticAlgorithm::findDistance(std::vector<SolutionSpace::Coordination> in
     return totalDistance;
 }
 
-void GeneticAlgorithm::startEvalution() {
-    // add stopping criteria
+void GeneticAlgorithm::startEvolution() {
     int notOptimizing = 0;
     float best = std::numeric_limits<float>::max();
     float temp;
@@ -215,7 +214,7 @@ bool GeneticAlgorithm::isFeasible(std::vector<std::vector<SolutionSpace::Coordin
 }
 
 float GeneticAlgorithm::findBestValue(std::vector<std::vector<SolutionSpace::Coordination>> sol) {
-    float best = std::numeric_limits<float>::max();;
+    float best = std::numeric_limits<float>::max();
     float temp;
     for (auto &i : sol) {
         temp = GeneticAlgorithm::findDistance(i);
